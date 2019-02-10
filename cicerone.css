@@ -1,0 +1,52 @@
+#CiceroneProgressTracker {
+    font-family: Century Gothic;
+}
+
+#CiceroneNav {
+    margin-bottom: 10px;
+}
+
+#CiceroneBody {
+    display: flex;
+}
+
+.cicerone-title {
+    display: flex;
+    font-size: 24px;
+}
+
+.cicerone-bullets {
+    display: flex;
+}
+
+.cicerone-subtitle {
+    display: flex;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.cicerone-bullet-item {
+    color: white;
+}
+
+.cicerone-bullet-item.active {
+    color: darkred;
+}
+
+.cicerone-progressbar {
+    height: 16px;
+    position: relative;
+    bottom: 47px;
+    z-index: -1;
+}
+
+.cicerone-progressbar .progressed {
+    background-color: darkred;
+}
+
+.fas.active {
+	color: white;
+}
+.fas.inactive {
+	color: #e8ebee;
+}	
