@@ -8,7 +8,7 @@
 
 		var settings = $.extend({
 			titles: ['Step 1', 'Step 2','Step 3'],
-			subtitles: ['sub 1', 'sub 2', 'sub 3']
+			subtitles: null
 		}, options);
 
 		TotalSteps = settings.titles.length;
@@ -43,16 +43,18 @@
 			$("<i id='InnerBullet' class='fas fa-circle fa-stack-1x inactive'></i>").appendTo(currentBulletID);
 		}	
 
-		// SUBTITLES
-		$("<div id='CiceroSubtitles' class='cicero-subtitle'></div>").appendTo('#CiceroNav');
-		for (var i = 0; i <= TotalSteps - 1; ++i)
-		{
-			$("<div class='col-sm'>" + settings.subtitles[i] + "</div>").appendTo('#CiceroSubtitles');
-		}
-
 		// PROGRESSBAR
 		$("<div id='CiceroProgressBarContainer' class='progress cicero-progressbar'></div>").appendTo('#CiceroNav');
 		$("<div id='CiceroProgressBar' class='progress-bar progressed' style='width: " + BarWidth + "%'></div>").appendTo('#CiceroProgressBarContainer');
+		
+		// SUBTITLES
+		if (settings.subtitles != null) {
+			$("<div id='CiceroSubtitles' class='cicero-subtitle'></div>").appendTo('#CiceroNav');
+			for (var i = 0; i <= TotalSteps - 1; ++i)
+			{
+				$("<div class='col-sm'>" + settings.subtitles[i] + "</div>").appendTo('#CiceroSubtitles');
+			}
+		}
 		
 		// BODY
 		$("<div id='CiceroBody' class='cicero-body'></div>").appendTo('#Cicero');
