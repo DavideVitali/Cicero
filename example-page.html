@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/cicero.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="scripts/cicero.js"></script>
+    </head>
+    <body>
+        <div class="container text-center" style="height: 100%">
+            <div style="height: 200px"></div>
+            <div id="CiceroProgressTracker">
+                <div id="CiceroNav">
+                    <div class="cicero-title">
+                        <div class="col-sm">Utente</div>
+                        <div class="col-sm">Ruolo</div>
+                        <div class="col-sm">Gruppi</div>
+                    </div>
+                    <div class="cicero-bullets">
+                        <div id="Step1" class="col-sm cicero-bullet-item active">
+                            <span class="fa-stack fa-1x">
+                                <i id="OuterBullet" class="fas fa-circle fa-stack-2x"></i>
+                                <i id="InnerBullet" class="fas fa-check fa-stack-1x active"></i>
+                            </span>
+                        </div>
+                        <div id="Step2" class="col-sm cicero-bullet-item">
+                            <span class="fa-stack fa-1x">
+                                <i id="OuterBullet" class="fas fa-circle fa-stack-2x"></i>
+                                <i id="InnerBullet" class="fas fa-circle fa-stack-1x inactive"></i>
+                            </span>
+                        </div>
+                        <div id="Step3" class="col-sm cicero-bullet-item">
+                            <span class="fa-stack fa-1x">
+                                <i id="OuterBullet" class="fas fa-circle fa-stack-2x"></i>
+                                <i id="InnerBullet" class="fas fa-circle fa-stack-1x inactive"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cicero-subtitle">
+                        <div class="col-sm">Scegli un utente da abilitare</div>
+                        <div class="col-sm">Seleziona il ruolo</div>
+                        <div class="col-sm">Assegnagli uno o più gruppi</div>
+                    </div>
+                    <div id="CiceroProgressBarContainer" class="progress cicero-progressbar">
+                        <!-- 3 punti: 16% a punto -->
+                        <div id="CiceroProgressBar" class="progress-bar progressed" style="width: 16%"></div>
+                    </div>        
+                </div>
+                <div id="CiceroBody" class="cicero-body">
+                    <div onclick="ProgressBarIndietro()"><i class="fas fa-chevron-left fa-5x"></i></div>
+                    <div id="CiceroBodyContent" style="margin: auto"></div>
+                    <div onclick="ProgressBarAvanti()"><i class="fas fa-chevron-right fa-5x"></i></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
