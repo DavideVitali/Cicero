@@ -1,0 +1,52 @@
+#CiceroProgressTracker {
+    font-family: Century Gothic;
+}
+
+#CiceroNav {
+    margin-bottom: 10px;
+}
+
+#CiceroBody {
+    display: flex;
+}
+
+.cicero-title {
+    display: flex;
+    font-size: 24px;
+}
+
+.cicero-bullets {
+    display: flex;
+}
+
+.cicero-subtitle {
+    display: flex;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.cicero-bullet-item {
+    color: white;
+}
+
+.cicero-bullet-item.active {
+    color: darkred;
+}
+
+.cicero-progressbar {
+    height: 16px;
+    position: relative;
+    bottom: 47px;
+    z-index: -1;
+}
+
+.cicero-progressbar .progressed {
+    background-color: darkred;
+}
+
+.fas.active {
+	color: white;
+}
+.fas.inactive {
+	color: #e8ebee;
+}
