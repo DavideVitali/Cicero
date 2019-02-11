@@ -1,4 +1,8 @@
 # Cicero
 Simple progress tracker for web-based applications
 
-Works best with Bootstrap v4.2.1
+Dependencies:
+ - Bootstrap (tested with v4.2.1)
+ - FontAwesome (tested with v5.7.1)
+ - jQuery (tested with v3.3.1)
+ - popper (tested with v1.14.6)
